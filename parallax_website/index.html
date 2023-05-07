@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parallax_Website_Farhan</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <a href="#" class="logo">Farhan</a>
+      <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <section>
+      <img src="stars.png" id="stars" />
+      <img src="moon.png" id="moon" />
+      <img src="mountains_behind.png" id="mountains_behind" />
+      <h2 id="text">Parallax Website</h2>
+      <a href="#sec" id="btn">Explore</a>
+      <img src="mountains_front.png" id="mountains_front" />
+    </section>
+    <div class="sec" id="sec">
+      <h2>Parallax Scrolling Website Effects</h2>
+      <p>
+        Parallax scrolling is a popular web design technique where background
+        images move slower than foreground images, creating an illusion of depth
+        and immersion. It can give a website a more dynamic and engaging feel
+        and can be used to enhance storytelling and user experience.<br /><br />A
+        parallax website is a type of website design that uses parallax
+        scrolling effects to create an illusion of depth and movement. This
+        effect is achieved by having different elements of the webpage move at
+        different speeds as the user scrolls down or up the page.<br /><br />Parallax
+        websites typically have a more dynamic and engaging feel than
+        traditional websites, as the scrolling effect can add a layer of
+        interactivity and visual interest. They are often used for storytelling
+        or to showcase products or services in a visually stunning way.<br /><br />However,
+        it's important to use parallax effects sparingly and in moderation, as
+        too much scrolling animation can be distracting and negatively impact
+        the user experience. Additionally, parallax websites can sometimes have
+        longer load times and be less accessible to users with certain
+        disabilities, so it's important to keep these factors in mind when
+        designing a parallax website.<br /><br />Lorem ipsum dolor sit, amet
+        consectetur adipisicing elit. Quisquam maiores vitae totam, saepe soluta
+        facere quis consequatur aperiam, in sunt voluptas aut quam? Consequatur,
+        sed non facere quibusdam quidem numquam! Lorem ipsum dolor, sit amet
+        consectetur adipisicing elit. Quasi fugit omnis libero, nobis odit
+        delectus qui itaque unde exercitationem? Recusandae, nisi. Provident vel
+        ipsa quidem iste assumenda! Mollitia, fugit numquam. Lorem ipsum dolor,
+        sit amet consectetur adipisicing elit. Minus voluptatum soluta minima
+        iste ex ullam magni facere veniam voluptatem fugiat id voluptates illum
+        delectus, corporis aliquam neque modi, debitis aperiam.<br /><br />Lorem
+        ipsum dolor sit, amet consectetur adipisicing elit. Quisquam maiores
+        vitae totam, saepe soluta facere quis consequatur aperiam, in sunt
+        voluptas aut quam? Consequatur, sed non facere quibusdam quidem numquam!
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quasi fugit
+        omnis libero, nobis odit delectus qui itaque unde exercitationem?
+        Recusandae, nisi. Provident vel ipsa quidem iste assumenda! Mollitia,
+        fugit numquam. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Minus voluptatum soluta minima iste ex ullam magni facere veniam
+        voluptatem fugiat id voluptates illum delectus, corporis aliquam neque
+        modi, debitis aperiam.
+      </p>
+    </div>
+
+    <script>
+      let stars = document.getElementById("stars");
+      let moon = document.getElementById("moon");
+      let mountains_behind = document.getElementById("mountains_behind");
+      let text = document.getElementById("text");
+      let btn = document.getElementById("btn");
+      let mountains_front = document.getElementById("mountains_front");
+      let header = document.querySelector("header");
+
+      window.addEventListener("scroll", function () {
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + "px";
+        moon.style.top = value * 1.05 + "px";
+        mountains_behind.style.top = value * 0.5 + "px";
+        mountains_front.style.top = value * 0 + "px";
+        text.style.marginRight = value * 4 + "px";
+        text.style.marginTop = value * 1.5 + "px";
+        btn.style.marginTop = value * 1.5 + "px";
+        header.style.top = value * 0.5 + "px";
+      });
+    </script>
+  </body>
+</html>
+
+<!--  orginal idea from this link https://www.youtube.com/watch?v=1wfeqDyMUx4  -->
